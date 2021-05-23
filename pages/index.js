@@ -29,6 +29,7 @@ const  Home = (props) => {
 
 export async function getServerSideProps() {
   const url = process.env.ENVIRONMENT === 'development' ? 'http://localhost:3000' : process.env.VERCEL_URL
+  console.log(url)
   const [projectRes, blogRes] = await Promise.all([fetch(`${url}/api/projects`),fetch('https://dev.to/api/articles?username=imkarthikeyan')])
   const [projects,blogs] =  await Promise.all([
     projectRes.json(), 
