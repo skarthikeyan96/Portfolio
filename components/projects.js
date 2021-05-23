@@ -37,21 +37,20 @@ const Projects = (props) => {
                       <a
                         href={project.preview_url}
                         target="_blank"
+                        class="text-indigo-400 inline-flex items-center mt-4 font-mulish mr-3"
+                      >
+                       Live Preview
+                       
+                      </a>
+                    )}
+                    {project.repo_url && (
+                      <a
+                        href={project.repo_url}
+                        target="_blank"
                         class="text-indigo-400 inline-flex items-center mt-4 font-mulish"
                       >
-                        Learn More
-                        <svg
-                          class="w-4 h-4 ml-2"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          fill="none"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
+                       Source Code
+                       
                       </a>
                     )}
                   </div>
