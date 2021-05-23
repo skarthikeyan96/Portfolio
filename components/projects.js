@@ -1,7 +1,7 @@
 import React from "react";
 
 const Projects = (props) => {
-  const projects = props.projects.entriesData;
+  const projects =  props.projects?.entriesData;
   return (
     <div id="projects">
       <section class="bg-white dark:bg-gray-800 font-abril">
